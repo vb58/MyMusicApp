@@ -42,6 +42,7 @@ export const NavBar = props=>{
 
     const onLogout=()=>{
         Cookies.remove(reducerCases.SET_TOKEN)
+        //window.location.href='https://music-player-app-cecfb.web.app/'
         window.location.href='http://localhost:3000/'
     }
     const changeMode = ()=>dispatch({type:reducerCases.SET_DARK_MODE,darkMode:!darkMode})

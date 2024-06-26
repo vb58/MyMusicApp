@@ -16,8 +16,9 @@ export const Login =()=>{
     }
 
     const onConnect=async ()=>{
-        const clientId = userLogin ? userClientId : "3f5f0dfd2a9f487790b4a2cfe57b4d5e"
-        const url = "http://localhost:3000/home"
+        const clientId = userLogin ? userClientId : "8c92e3f1ec474f7898bc3edaf36a4fcc"
+       // const url = "https://music-player-app-cecfb.web.app/home"
+       const url="http://localhost:3000/home"
         const apiUrl = "https://accounts.spotify.com/authorize"
         const scope=['user-library-read',
             'user-read-email',
@@ -37,8 +38,8 @@ export const Login =()=>{
         <SpotifyImage>
         <GiMusicSpell/> My Music
         </SpotifyImage>
-        <div>
-        { userLogin && <div className="buttons-container">
+        <div className="buttons-container">
+        { userLogin && <div>
              <input type="text" placeholder="Enter your client Id" value={userClientId} onChange={(e)=>setUserClientId(e.target.value)}/>
              <div>
             <ConnectButton onClick={onLogin}>Login</ConnectButton>
