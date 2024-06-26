@@ -6,6 +6,8 @@ export const Login =()=>{
     const [userClientId,setUserClientId] = useState('')
 
     const onConnect=async ()=>{
+         if(userClientId==="") alert("Enter Client Id")
+            else{
         const clientId = userClientId;
        const url="http://localhost:3000/home"
         const apiUrl = "https://accounts.spotify.com/authorize"
@@ -20,7 +22,7 @@ export const Login =()=>{
             'user-top-read']
     
       window.location.href=`${apiUrl}?client_id=${clientId}&redirect_uri=${url}&scope=${scope.join(' ')}&response_type=token&show_daialog=true`
-      
+            }
 }
     return <LoginContainer>
        <div className='sub-container'>
