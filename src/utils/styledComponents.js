@@ -10,14 +10,18 @@ export const SpotifyContainer = styled.div`
         display:grid;
         grid-template-columns:15vw 85vw;
         height:100%;
-    width:100%;
-    background-color:${props => props.darkmode ? '#2C3E50' : '#e3e3e3'} ;
+        width:100%;
+        background-color:${props => props.darkmode ? '#2C3E50' : '#e3e3e3'} ;
+        @media (max-width:600px){
+            grid-template-columns: 25vw 75vw;
+        }
     }
     .body{
     height:100%;
     width:100%;
     overflow:auto;
-}
+    }
+
 `
 
 export const SideBarContainer = styled.div`
@@ -42,6 +46,13 @@ export const SideBarContainer = styled.div`
             margin:0 5px;
             height: 3em;
             width: 3em;
+        }
+        @media (max-width:600px){
+        font-size:18px;
+        svg{
+            height:1em;
+            width:1em;
+        }
         }
     }
     }
@@ -89,8 +100,7 @@ export const AlbumContainer = styled.div`
         img{
         height: 50vh;
         box-shadow:rgba(0,0,0,0.1) 0px 25px 50 12px;
-        }
-        
+        }  
     }
     .details{
         display:flex;
@@ -161,6 +171,33 @@ export const AlbumContainer = styled.div`
                     }
                 }
             }
+        }
+    }
+    @media (max-width:600px){
+        font-size:15px;
+        .image{
+            img{
+                height:30vh;
+            }
+        }
+        .details{
+            .title{
+                font-size:20px;
+            }
+        }
+        .list{
+            .header-row{
+                width:70vw;
+            }.tracks{
+                font-size:15px;
+            .row{
+            .image{
+                img{
+                    height:40px;
+                }
+            }
+        }
+        }
         }
     }
 }
@@ -250,6 +287,33 @@ export const BodyContainer = styled.div`
             }
         }
     }
+    @media (max-width:600px){
+        font-size:15px;
+        .image{
+            img{
+                height:30vh;
+            }
+        }
+        .details{
+            .title{
+                font-size:20px;
+            }
+        }
+        .list{
+            .header-row{
+                width:70vw;
+            }.tracks{
+                font-size:15px;
+            .row{
+            .image{
+                img{
+                    height:40px;
+                }
+            }
+        }
+        }
+        }
+    }
 }
 `
 
@@ -305,10 +369,19 @@ ul{
             height:150px;
             width:150px;
             margin:10px;
-           
+            
         }
     }
+    @media (max-width:600px){
+        text-align:center;
+        flex-direction:column;
+        
+        }
 }
+@media (max-width:600px){
+        font-size:12px;
+        align-items:center;
+        }
 `
 
 
@@ -332,11 +405,12 @@ border:1px solid white;
 border-radius: 20px;;
 height:50vh;
 box-shadow: 1px 5px 5px 5px #413c3c; 
+
 }
 gap:5rem;
 .buttons-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
         input{
@@ -350,6 +424,8 @@ gap:5rem;
             padding:10px;
         }
 }
+
+
 `
 export const SpotifyImage = styled.div`
 display:flex;
@@ -365,10 +441,13 @@ margin:10px 0;
             height: 2em;
             width: 3em;
         }
+@media (max-width:600px){
+font-size:20px;
+}
 `
 
 export const ConnectButton = styled.button`
-padding:10px 40px;
+padding:10px 20px;
 border-radius:5rem;
 border:none;
 background-color:white;
@@ -377,6 +456,9 @@ font-size:18px;
 font-family:"Roboto";
 cursor:pointer;
 margin:10px;
+    @media (max-width:600px){
+        font-size:12px;
+}
 `
 
 
@@ -464,12 +546,16 @@ gap:20px;
     .state,.previous,.next{
         font-size:30px;
     }
+    @media (max-width:600px){
+        gap:10px;
+         .state,.previous,.next{
+            font-size:25px;
+            
+         }
+        }
     
 }
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px blue inset;
-    -webkit-text-fill-color: red !important;
-}
+
 `
 
 export const PlaylistsContainer = styled.div`
@@ -507,7 +593,7 @@ flex-direction: column;
 color:${props => props.darkmode ? 'white' : 'black'} ;
 .search-bar{
     background-color:white;
-    width:30%;
+    width:30vw;
     padding:10px 20px;
     border-radius:2rem;
     border:1px solid black;
@@ -557,9 +643,9 @@ export const VolumeContainer = styled.div`
     justify-content: flex-end;
     align-items: center;
     input{
-        width:16rem;
+        width:20vw;
         border-radius: 2rem;
-        height:0.5rem;
+        height:20px;
         background-color:blue;
         cursor: pointer;
     }
@@ -567,5 +653,11 @@ export const VolumeContainer = styled.div`
         color:${props=>props.darkmode?'#b3b3b3':'#49d699'};
         margin:0 10px;
         font-size:20px;
+    }
+    @media (max-width:600px)
+    {
+        svg{
+            font-size:15px;
+        }
     }
 `

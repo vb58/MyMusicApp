@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import { StateProvider } from './utils/StateProvider';
 import reducer, { initialState } from './utils/reducer';
-import {BrowserRouter} from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
