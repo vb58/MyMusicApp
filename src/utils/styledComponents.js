@@ -12,7 +12,7 @@ export const SpotifyContainer = styled.div`
         height:100%;
         width:100%;
         background-color:${props => props.darkmode ? '#2C3E50' : '#e3e3e3'} ;
-        @media (max-width:600px){
+        @media (max-width:767px){
             grid-template-columns: 25vw 75vw;
         }
     }
@@ -47,7 +47,7 @@ export const SideBarContainer = styled.div`
             height: 3em;
             width: 3em;
         }
-        @media (max-width:600px){
+        @media (max-width:767px){
         font-size:18px;
         svg{
             height:1em;
@@ -173,7 +173,7 @@ export const AlbumContainer = styled.div`
             }
         }
     }
-    @media (max-width:600px){
+    @media (max-width:767px){
         font-size:15px;
         .image{
             img{
@@ -287,7 +287,7 @@ export const BodyContainer = styled.div`
             }
         }
     }
-    @media (max-width:600px){
+    @media (max-width:767px){
         font-size:15px;
         .image{
             img{
@@ -372,13 +372,13 @@ ul{
             
         }
     }
-    @media (max-width:600px){
+    @media (max-width:767px){
         text-align:center;
         flex-direction:column;
         
         }
 }
-@media (max-width:600px){
+@media (max-width:767px){
         font-size:12px;
         align-items:center;
         }
@@ -441,7 +441,7 @@ margin:10px 0;
             height: 2em;
             width: 3em;
         }
-@media (max-width:600px){
+@media (max-width:767px){
 font-size:20px;
 }
 `
@@ -456,7 +456,7 @@ font-size:18px;
 font-family:"Roboto";
 cursor:pointer;
 margin:10px;
-    @media (max-width:600px){
+    @media (max-width:767px){
         font-size:12px;
 }
 `
@@ -546,7 +546,7 @@ gap:20px;
     .state,.previous,.next{
         font-size:30px;
     }
-    @media (max-width:600px){
+    @media (max-width:767px){
         gap:10px;
          .state,.previous,.next{
             font-size:25px;
@@ -654,7 +654,7 @@ export const VolumeContainer = styled.div`
         margin:0 10px;
         font-size:20px;
     }
-    @media (max-width:600px)
+    @media (max-width:767px)
     {
         svg{
             font-size:15px;
